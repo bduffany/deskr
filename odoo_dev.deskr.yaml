@@ -13,10 +13,9 @@
   position: [1712, 0, 0, 0]
   # Give enough time for Upwork to boot up
   reposition_preconditions:
-    - time.sleep(3000) or True
+    - time.sleep(3) or True
   window_locator:
-    pstree:
-      command_regex: upwork
+    title_regex: Upwork
 
 - command: code ~/code/odoo-docker
   monitor: primary
@@ -34,7 +33,7 @@
 - command: google-chrome --new-window http://localhost:8069
   # Make sure server is running before launching Chrome
   command_preconditions:
-    - "poll(lambda: sh('curl -s -o /dev/null -w "%{http_code}" http://localhost:8069') == '200')"
+    - 'poll(lambda: sh(''curl -s -o /dev/null -w "%{http_code}" http://localhost:8069'') == ''200'')'
   monitor: secondary
   position: [20%, 0, 30%, 0]
   window_locator:
@@ -43,7 +42,7 @@
 - command: google-chrome --incognito --new-window http://localhost:8069/shop
   # Make sure server is running before launching Chrome
   command_preconditions:
-    - "poll(lambda: sh('curl -s -o /dev/null -w "%{http_code}" http://localhost:8069') == '200')"
+    - 'poll(lambda: sh(''curl -s -o /dev/null -w "%{http_code}" http://localhost:8069'') == ''200'')'
   monitor: secondary
   position: [0, 0, 60%, 0]
   window_locator:

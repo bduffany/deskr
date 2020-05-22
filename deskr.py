@@ -1,10 +1,15 @@
+"""Main module implementing deskr and its CLI."""
+
 import os
 import re
-import sys
 import time
-import yaml
 from argparse import ArgumentParser
-from util import collect, sh, ps_tree, ps_tree_query, ps_tree_descendants, pp, retry
+from concurrent.futures import ThreadPoolExecutor
+from functools import partial
+
+import yaml
+
+from util import collect, pp, ps_tree, ps_tree_query, retry, sh
 
 
 @collect(list)
@@ -60,11 +65,14 @@ def get_matching_window(window_spec):
     open_windows = None
     locator = window_spec["window_locator"]
 
+    title = locator.get("title")
     title_regex = locator.get("title_regex")
-    if title_regex:
+    if title_regex or title:
         open_windows = get_open_windows()
         for window in open_windows:
-            if re.search(title_regex, window["title"]):
+            if (title_regex and re.search(title_regex, window["title"])) or (
+                title and window["title"] == title
+            ):
                 return window
 
     pstree_query = locator.get("pstree")
@@ -97,18 +105,8 @@ def poll(f):
     return f()
 
 
-def check_deps(deps):
-    polled = deps.get("poll", [])
-    for dep in polled:
-        poll(dep)
-    once = deps.get("once", [])
-
-
 def check_preconditions(preconditions):
-    env = {
-        "sh": sh,
-        "poll": poll,
-    }
+    env = {key: globals()[key] for key in ["sh", "poll", "time"]}
     if not preconditions:
         return
     for precondition in preconditions:
@@ -130,6 +128,7 @@ def execute_spec(window_spec, monitors_by_label):
     reposition_preconditions = window_spec.get("reposition_preconditions")
     check_preconditions(reposition_preconditions)
 
+    sh(f'wmctrl -ia {window["id"]}', print_command=True)
     sh(f'wmctrl -i -r {window["id"]} -e {wmctrl_location}', print_command=True)
 
 
@@ -149,7 +148,7 @@ def get_running_commands_by_pid():
 @collect(list)
 def get_open_windows():
     # TODO: add -p flag to get PID and avoid xprop invocation.
-    # Also use xwininfo -tree -root to get window title.
+    # TODO: use xwininfo -tree -root to get app title.
     lines = sh("wmctrl -l").split("\n")
     hostname = sh("hostname").strip()
     commands_by_pid = get_running_commands_by_pid()
@@ -178,8 +177,9 @@ def layout(config_path):
     with open(config_path, "r") as config_file:
         config = yaml.load(config_file, Loader=yaml.FullLoader)
 
-    for window_spec in config:
-        execute_spec(window_spec, monitors_by_label)
+    with ThreadPoolExecutor(max_workers=16) as executor:
+        for window_spec in config:
+            executor.submit(partial(execute_spec, window_spec, monitors_by_label))
 
 
 def pstree():

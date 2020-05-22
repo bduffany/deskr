@@ -11,12 +11,8 @@
 - command: upwork
   monitor: secondary
   position: [1712, 0, 0, 0]
-  # Give enough time for Upwork to boot up
-  reposition_preconditions:
-    - time.sleep(3000) or True
   window_locator:
-    pstree:
-      command_regex: upwork
+    title: Upwork
 
 # VSCode full screen on primary monitor
 - command: code ~/src/my-cool-repo
@@ -38,7 +34,7 @@
 - command: google-chrome --new-window http://localhost:3000
   # Make sure server is running before launching Chrome
   command_preconditions:
-    - "poll(lambda: sh('curl -s -o /dev/null -w "%{http_code}" http://localhost:3000') == '200')"
+    - 'poll(lambda: sh(''curl -s -o /dev/null -w "%{http_code}" http://localhost:3000'') == ''200'')'
   monitor: secondary
   position: [20%, 0, 30%, 0]
   # Locate the Chrome Window according to the title
