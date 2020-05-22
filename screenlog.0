@@ -1,5 +1,0 @@
-ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (failed to map segment from shared object): ignored.
-Gtk-[1;32mMessage[0m: [34m16:52:19.481[0m: Failed to load module "gail"
-Gtk-[1;32mMessage[0m: [34m16:52:19.481[0m: Failed to load module "atk-bridge"
-ls
-^C[01;32mb@d[00m:[01;34m~/code/deskr[00m$ exit
