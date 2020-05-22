@@ -13,7 +13,9 @@ _Well then, have I got an app for you!_
 ### DISCLAIMER
 
 This can only be considered an "app" if you are **tech-savvy** enough
-to run arbitrary code downloaded from the Internet on your _c o m p u t e r_
+to run arbitrary code downloaded from the Internet on your
+
+_c o m p u t e r_
 
 ## DESKR
 
