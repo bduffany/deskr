@@ -1,0 +1,50 @@
+- command: gnome-terminal -- bash -c 'cd ~/code/odoo-docker && ./start.sh'
+  monitor: secondary
+  # top, right, bottom, left (like CSS position shorthand)
+  position: [80%, 0, 100, 0]
+  window_locator:
+    pstree:
+      predicate: >
+        'gnome-terminal-server' in process['command']
+        and any(( d['command'] == '/bin/bash ./start.sh' for d in descendants() ))
+
+- command: upwork
+  monitor: secondary
+  position: [1712, 0, 0, 0]
+  # Give enough time for Upwork to boot up
+  reposition_preconditions:
+    - time.sleep(3000) or True
+  window_locator:
+    pstree:
+      command_regex: upwork
+
+- command: code ~/code/odoo-docker
+  monitor: primary
+  position: [0, 0, 0, 0]
+  window_locator:
+    title_regex: odoo-docker
+
+- command: spotify
+  monitor: secondary
+  position: [50%, 0, 15%, 0]
+  window_locator:
+    pstree:
+      command_regex: /spotify$
+
+- command: google-chrome --new-window http://localhost:8069
+  # Make sure server is running before launching Chrome
+  command_preconditions:
+    - "poll(lambda: sh('curl -s -o /dev/null -w "%{http_code}" http://localhost:8069') == '200')"
+  monitor: secondary
+  position: [20%, 0, 30%, 0]
+  window_locator:
+    title_regex: 'Home.*Chrome'
+
+- command: google-chrome --incognito --new-window http://localhost:8069/shop
+  # Make sure server is running before launching Chrome
+  command_preconditions:
+    - "poll(lambda: sh('curl -s -o /dev/null -w "%{http_code}" http://localhost:8069') == '200')"
+  monitor: secondary
+  position: [0, 0, 60%, 0]
+  window_locator:
+    title_regex: 'Shop.*Chrome'

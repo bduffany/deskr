@@ -1,0 +1,2066 @@
+[
+  {
+    "pid": 1,
+    "parent_pid": 0,
+    "command": "/sbin/init splash",
+    "children": [
+      {
+        "pid": 440,
+        "parent_pid": 1,
+        "command": "/lib/systemd/systemd-journald",
+        "children": []
+      },
+      {
+        "pid": 464,
+        "parent_pid": 1,
+        "command": "/lib/systemd/systemd-udevd",
+        "children": []
+      },
+      {
+        "pid": 845,
+        "parent_pid": 1,
+        "command": "/lib/systemd/systemd-resolved",
+        "children": []
+      },
+      {
+        "pid": 846,
+        "parent_pid": 1,
+        "command": "/lib/systemd/systemd-timesyncd",
+        "children": []
+      },
+      {
+        "pid": 871,
+        "parent_pid": 1,
+        "command": "/usr/lib/accountsservice/accounts-daemon",
+        "children": []
+      },
+      {
+        "pid": 872,
+        "parent_pid": 1,
+        "command": "/usr/sbin/acpid",
+        "children": []
+      },
+      {
+        "pid": 875,
+        "parent_pid": 1,
+        "command": "avahi-daemon: running [d.local]",
+        "children": [
+          {
+            "pid": 932,
+            "parent_pid": 875,
+            "command": "avahi-daemon: chroot helper",
+            "children": []
+          }
+        ]
+      },
+      {
+        "pid": 876,
+        "parent_pid": 1,
+        "command": "/usr/lib/bluetooth/bluetoothd",
+        "children": []
+      },
+      {
+        "pid": 877,
+        "parent_pid": 1,
+        "command": "/usr/sbin/cron -f",
+        "children": []
+      },
+      {
+        "pid": 879,
+        "parent_pid": 1,
+        "command": "/usr/sbin/cupsd -l",
+        "children": []
+      },
+      {
+        "pid": 880,
+        "parent_pid": 1,
+        "command": "/usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+        "children": []
+      },
+      {
+        "pid": 881,
+        "parent_pid": 1,
+        "command": "/usr/sbin/NetworkManager --no-daemon",
+        "children": []
+      },
+      {
+        "pid": 891,
+        "parent_pid": 1,
+        "command": "/usr/sbin/irqbalance --foreground",
+        "children": []
+      },
+      {
+        "pid": 895,
+        "parent_pid": 1,
+        "command": "/usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers",
+        "children": []
+      },
+      {
+        "pid": 899,
+        "parent_pid": 1,
+        "command": "/usr/lib/policykit-1/polkitd --no-debug",
+        "children": []
+      },
+      {
+        "pid": 901,
+        "parent_pid": 1,
+        "command": "/usr/sbin/rsyslogd -n -iNONE",
+        "children": []
+      },
+      {
+        "pid": 902,
+        "parent_pid": 1,
+        "command": "/usr/lib/snapd/snapd",
+        "children": []
+      },
+      {
+        "pid": 905,
+        "parent_pid": 1,
+        "command": "/usr/bin/nvidia-persistenced --user nvidia-persistenced --no-persistence-mode --verbose",
+        "children": []
+      },
+      {
+        "pid": 913,
+        "parent_pid": 1,
+        "command": "/usr/libexec/switcheroo-control",
+        "children": []
+      },
+      {
+        "pid": 921,
+        "parent_pid": 1,
+        "command": "/lib/systemd/systemd-logind",
+        "children": []
+      },
+      {
+        "pid": 922,
+        "parent_pid": 1,
+        "command": "/usr/sbin/thermald --no-daemon --dbus-enable",
+        "children": []
+      },
+      {
+        "pid": 924,
+        "parent_pid": 1,
+        "command": "/usr/lib/udisks2/udisksd",
+        "children": []
+      },
+      {
+        "pid": 925,
+        "parent_pid": 1,
+        "command": "/sbin/wpa_supplicant -u -s -O /run/wpa_supplicant",
+        "children": []
+      },
+      {
+        "pid": 927,
+        "parent_pid": 1,
+        "command": "/usr/sbin/zed -F",
+        "children": []
+      },
+      {
+        "pid": 962,
+        "parent_pid": 1,
+        "command": "/usr/sbin/cups-browsed",
+        "children": []
+      },
+      {
+        "pid": 972,
+        "parent_pid": 1,
+        "command": "/usr/sbin/ModemManager --filter-policy=strict",
+        "children": []
+      },
+      {
+        "pid": 981,
+        "parent_pid": 1,
+        "command": "/usr/bin/containerd",
+        "children": []
+      },
+      {
+        "pid": 989,
+        "parent_pid": 1,
+        "command": "/usr/sbin/lightdm",
+        "children": [
+          {
+            "pid": 1109,
+            "parent_pid": 989,
+            "command": "/usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch",
+            "children": []
+          },
+          {
+            "pid": 1366,
+            "parent_pid": 989,
+            "command": "lightdm --session-child 13 20",
+            "children": [
+              {
+                "pid": 2257,
+                "parent_pid": 1366,
+                "command": "xfce4-session",
+                "children": [
+                  {
+                    "pid": 2408,
+                    "parent_pid": 2257,
+                    "command": "/usr/bin/ssh-agent /usr/bin/im-launch env LD_PRELOAD=libgtk3-nocsd.so.0 startxfce4",
+                    "children": []
+                  },
+                  {
+                    "pid": 2450,
+                    "parent_pid": 2257,
+                    "command": "xfwm4 --display :0.0 --sm-client-id 25252dd14-58cc-4f86-92ea-62ea2298ce9e",
+                    "children": []
+                  },
+                  {
+                    "pid": 2466,
+                    "parent_pid": 2257,
+                    "command": "xfce4-panel --display :0.0 --sm-client-id 2292cf144-d3be-41df-b1d0-9c432ece9ecf",
+                    "children": [
+                      {
+                        "pid": 2490,
+                        "parent_pid": 2466,
+                        "command": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 6 23068680 systray Notification Area Area where notification icons appear",
+                        "children": []
+                      },
+                      {
+                        "pid": 2491,
+                        "parent_pid": 2466,
+                        "command": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libpulseaudio-plugin.so 8 23068681 pulseaudio PulseAudio Plugin Adjust the audio volume of the PulseAudio sound system",
+                        "children": []
+                      },
+                      {
+                        "pid": 2492,
+                        "parent_pid": 2466,
+                        "command": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libnotification-plugin.so 10 23068682 notification-plugin Notification Plugin Notification plugin for the Xfce panel",
+                        "children": []
+                      },
+                      {
+                        "pid": 2493,
+                        "parent_pid": 2466,
+                        "command": "/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libactions.so 14 23068683 actions Action Buttons Log out, lock or other system actions",
+                        "children": []
+                      },
+                      {
+                        "pid": 3495,
+                        "parent_pid": 2466,
+                        "command": "/opt/google/chrome/chrome",
+                        "children": [
+                          {
+                            "pid": 3500,
+                            "parent_pid": 3495,
+                            "command": "cat",
+                            "children": []
+                          },
+                          {
+                            "pid": 3501,
+                            "parent_pid": 3495,
+                            "command": "cat",
+                            "children": []
+                          },
+                          {
+                            "pid": 3505,
+                            "parent_pid": 3495,
+                            "command": "/opt/google/chrome/chrome --type=zygote --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a,",
+                            "children": [
+                              {
+                                "pid": 3508,
+                                "parent_pid": 3505,
+                                "command": "/opt/google/chrome/nacl_helper",
+                                "children": [
+                                  {
+                                    "pid": 6950,
+                                    "parent_pid": 3508,
+                                    "command": "/opt/google/chrome/nacl_helper",
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "pid": 3511,
+                                "parent_pid": 3505,
+                                "command": "/opt/google/chrome/chrome --type=zygote --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a,",
+                                "children": [
+                                  {
+                                    "pid": 3688,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=15 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6055,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=110 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6138,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=119 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6222,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=133 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6289,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=143 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6318,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=148 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6628,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=168 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6699,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=177 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6933,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=195 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 6964,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=201 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 7107,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=228 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 7170,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=238 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 33701,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=447 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 35411,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=468 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 36530,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=474 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 38168,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=511 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 38992,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=531 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 39216,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=540 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 59448,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=657 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 60143,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=672 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 60159,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=673 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 60180,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=674 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  },
+                                  {
+                                    "pid": 60199,
+                                    "parent_pid": 3511,
+                                    "command": "/opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=675 --no-v8-untrusted-code-mitigations --shared-files",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "pid": 3529,
+                            "parent_pid": 3495,
+                            "command": "/opt/google/chrome/chrome --type=gpu-process --field-trial-handle=4140755948329408591,10286671499873859658,131072 --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --gpu-preferences=MAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA= --shared-files",
+                            "children": [
+                              {
+                                "pid": 3547,
+                                "parent_pid": 3529,
+                                "command": "/opt/google/chrome/chrome --type=broker",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "pid": 3534,
+                            "parent_pid": 3495,
+                            "command": "/opt/google/chrome/chrome --type=utility --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --shared-files",
+                            "children": []
+                          },
+                          {
+                            "pid": 3643,
+                            "parent_pid": 3495,
+                            "command": "/opt/google/chrome/chrome --type=utility --field-trial-handle=4140755948329408591,10286671499873859658,131072 --lang=en-US --service-sandbox-type=audio --disable-webrtc-apm-in-audio-service --enable-crash-reporter=85bb07d7-b8cb-4d9c-b4aa-9f734a9e441a, --shared-files",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "pid": 7625,
+                        "parent_pid": 2466,
+                        "command": "xfce4-appfinder",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "pid": 2476,
+                    "parent_pid": 2257,
+                    "command": "Thunar --sm-client-id 2bfa75f12-f47b-40a4-bdbe-27e1e164b00f --daemon",
+                    "children": []
+                  },
+                  {
+                    "pid": 2487,
+                    "parent_pid": 2257,
+                    "command": "xfdesktop --display :0.0 --sm-client-id 230bba969-0af5-44f6-a087-7d9a0aeaea4f",
+                    "children": []
+                  },
+                  {
+                    "pid": 2502,
+                    "parent_pid": 2257,
+                    "command": "/usr/bin/python3 /usr/share/system-config-printer/applet.py",
+                    "children": []
+                  },
+                  {
+                    "pid": 2505,
+                    "parent_pid": 2257,
+                    "command": "xiccd",
+                    "children": []
+                  },
+                  {
+                    "pid": 2509,
+                    "parent_pid": 2257,
+                    "command": "update-notifier",
+                    "children": []
+                  },
+                  {
+                    "pid": 2512,
+                    "parent_pid": 2257,
+                    "command": "nm-applet",
+                    "children": []
+                  },
+                  {
+                    "pid": 2516,
+                    "parent_pid": 2257,
+                    "command": "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1",
+                    "children": []
+                  },
+                  {
+                    "pid": 2520,
+                    "parent_pid": 2257,
+                    "command": "/usr/libexec/geoclue-2.0/demos/agent",
+                    "children": []
+                  },
+                  {
+                    "pid": 2525,
+                    "parent_pid": 2257,
+                    "command": "light-locker",
+                    "children": []
+                  },
+                  {
+                    "pid": 2528,
+                    "parent_pid": 2257,
+                    "command": "zeitgeist-datahub",
+                    "children": []
+                  },
+                  {
+                    "pid": 2631,
+                    "parent_pid": 2257,
+                    "command": "/usr/libexec/evolution-data-server/evolution-alarm-notify",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "pid": 1053,
+        "parent_pid": 1,
+        "command": "/usr/lib/postgresql/12/bin/postgres -D /var/lib/postgresql/12/main -c config_file=/etc/postgresql/12/main/postgresql.conf",
+        "children": [
+          {
+            "pid": 1091,
+            "parent_pid": 1053,
+            "command": "postgres: 12/main: checkpointer",
+            "children": []
+          },
+          {
+            "pid": 1092,
+            "parent_pid": 1053,
+            "command": "postgres: 12/main: background writer",
+            "children": []
+          },
+          {
+            "pid": 1093,
+            "parent_pid": 1053,
+            "command": "postgres: 12/main: walwriter",
+            "children": []
+          },
+          {
+            "pid": 1094,
+            "parent_pid": 1053,
+            "command": "postgres: 12/main: autovacuum launcher",
+            "children": []
+          },
+          {
+            "pid": 1095,
+            "parent_pid": 1053,
+            "command": "postgres: 12/main: stats collector",
+            "children": []
+          },
+          {
+            "pid": 1096,
+            "parent_pid": 1053,
+            "command": "postgres: 12/main: logical replication launcher",
+            "children": []
+          }
+        ]
+      },
+      {
+        "pid": 1105,
+        "parent_pid": 1,
+        "command": "/usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal",
+        "children": []
+      },
+      {
+        "pid": 1111,
+        "parent_pid": 1,
+        "command": "/sbin/agetty -o -p -- \\u --noclear tty1 linux",
+        "children": []
+      },
+      {
+        "pid": 1242,
+        "parent_pid": 1,
+        "command": "/usr/libexec/rtkit-daemon",
+        "children": []
+      },
+      {
+        "pid": 1293,
+        "parent_pid": 1,
+        "command": "/usr/lib/upower/upowerd",
+        "children": []
+      },
+      {
+        "pid": 1361,
+        "parent_pid": 1,
+        "command": "/usr/libexec/colord",
+        "children": []
+      },
+      {
+        "pid": 1442,
+        "parent_pid": 1,
+        "command": "/usr/bin/whoopsie -f",
+        "children": []
+      },
+      {
+        "pid": 1453,
+        "parent_pid": 1,
+        "command": "/usr/sbin/kerneloops --test",
+        "children": []
+      },
+      {
+        "pid": 1463,
+        "parent_pid": 1,
+        "command": "/usr/sbin/kerneloops",
+        "children": []
+      },
+      {
+        "pid": 2239,
+        "parent_pid": 1,
+        "command": "/lib/systemd/systemd --user",
+        "children": [
+          {
+            "pid": 2240,
+            "parent_pid": 2239,
+            "command": "(sd-pam)",
+            "children": []
+          },
+          {
+            "pid": 2246,
+            "parent_pid": 2239,
+            "command": "/usr/bin/pulseaudio --daemonize=no --log-target=journal",
+            "children": []
+          },
+          {
+            "pid": 2248,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/tracker-miner-fs",
+            "children": []
+          },
+          {
+            "pid": 2255,
+            "parent_pid": 2239,
+            "command": "/usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+            "children": []
+          },
+          {
+            "pid": 2273,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfsd",
+            "children": [
+              {
+                "pid": 2529,
+                "parent_pid": 2273,
+                "command": "/usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0",
+                "children": []
+              }
+            ]
+          },
+          {
+            "pid": 2279,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes",
+            "children": []
+          },
+          {
+            "pid": 2286,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfs-udisks2-volume-monitor",
+            "children": []
+          },
+          {
+            "pid": 2299,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfs-goa-volume-monitor",
+            "children": []
+          },
+          {
+            "pid": 2304,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/goa-daemon",
+            "children": []
+          },
+          {
+            "pid": 2312,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/goa-identity-service",
+            "children": []
+          },
+          {
+            "pid": 2318,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfs-afc-volume-monitor",
+            "children": []
+          },
+          {
+            "pid": 2323,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfs-mtp-volume-monitor",
+            "children": []
+          },
+          {
+            "pid": 2327,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfs-gphoto2-volume-monitor",
+            "children": []
+          },
+          {
+            "pid": 2426,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/at-spi-bus-launcher",
+            "children": [
+              {
+                "pid": 2431,
+                "parent_pid": 2426,
+                "command": "/usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3",
+                "children": []
+              }
+            ]
+          },
+          {
+            "pid": 2435,
+            "parent_pid": 2239,
+            "command": "/usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd",
+            "children": []
+          },
+          {
+            "pid": 2441,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/at-spi2-registryd --use-gnome-session",
+            "children": []
+          },
+          {
+            "pid": 2448,
+            "parent_pid": 2239,
+            "command": "/usr/bin/gpg-agent --supervised",
+            "children": []
+          },
+          {
+            "pid": 2510,
+            "parent_pid": 2239,
+            "command": "/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd",
+            "children": []
+          },
+          {
+            "pid": 2558,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/dconf-service",
+            "children": []
+          },
+          {
+            "pid": 2577,
+            "parent_pid": 2239,
+            "command": "/usr/bin/zeitgeist-daemon",
+            "children": []
+          },
+          {
+            "pid": 2593,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gvfsd-metadata",
+            "children": []
+          },
+          {
+            "pid": 2602,
+            "parent_pid": 2239,
+            "command": "/usr/lib/zeitgeist/zeitgeist-fts",
+            "children": []
+          },
+          {
+            "pid": 2657,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/evolution-source-registry",
+            "children": []
+          },
+          {
+            "pid": 2667,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/evolution-calendar-factory",
+            "children": []
+          },
+          {
+            "pid": 2676,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/evolution-addressbook-factory",
+            "children": []
+          },
+          {
+            "pid": 3101,
+            "parent_pid": 2239,
+            "command": "/usr/bin/gnome-keyring-daemon --start --foreground --components=secrets",
+            "children": []
+          },
+          {
+            "pid": 7657,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/xdg-document-portal",
+            "children": []
+          },
+          {
+            "pid": 7660,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/xdg-permission-store",
+            "children": []
+          },
+          {
+            "pid": 8091,
+            "parent_pid": 2239,
+            "command": "/usr/bin/snap userd",
+            "children": []
+          },
+          {
+            "pid": 59706,
+            "parent_pid": 2239,
+            "command": "/usr/libexec/gnome-terminal-server",
+            "children": [
+              {
+                "pid": 59714,
+                "parent_pid": 59706,
+                "command": "/bin/bash ./start.sh",
+                "children": [
+                  {
+                    "pid": 59715,
+                    "parent_pid": 59714,
+                    "command": "sudo fuser -k 8069/tcp",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "pid": 2251,
+        "parent_pid": 1,
+        "command": "/usr/bin/gnome-keyring-daemon --daemonize --login",
+        "children": []
+      },
+      {
+        "pid": 2465,
+        "parent_pid": 1,
+        "command": "xfsettingsd --display :0.0 --sm-client-id 21f9f70b3-128d-4994-b0e3-1480b2f1625f",
+        "children": []
+      },
+      {
+        "pid": 2841,
+        "parent_pid": 1,
+        "command": "/snap/code/33/usr/share/code/code --force-user-env --no-sandbox --unity-launch --no-sandbox",
+        "children": [
+          {
+            "pid": 2843,
+            "parent_pid": 2841,
+            "command": "/snap/code/33/usr/share/code/code --type=zygote --no-sandbox",
+            "children": []
+          },
+          {
+            "pid": 2920,
+            "parent_pid": 2841,
+            "command": "/snap/code/33/usr/share/code/code --type=gpu-process --field-trial-handle=9030010178988867006,13740046290272185404,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --disable-color-correct-rendering --no-sandbox --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --service-request-channel-token=8428582245951029717",
+            "children": []
+          },
+          {
+            "pid": 2934,
+            "parent_pid": 2841,
+            "command": "/snap/code/33/usr/share/code/code --type=utility --field-trial-handle=9030010178988867006,13740046290272185404,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-US --service-sandbox-type=network --no-sandbox --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --service-request-channel-token=8913103191948802179 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101",
+            "children": []
+          },
+          {
+            "pid": 2943,
+            "parent_pid": 2841,
+            "command": "/snap/code/33/usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=9030010178988867006,13740046290272185404,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-US --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/snap/code/33/usr/share/code/resources/app --node-integration --webview-tag --no-sandbox --no-zygote --background-color=#282c34 --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=14639792759937351657 --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101",
+            "children": [
+              {
+                "pid": 2987,
+                "parent_pid": 2943,
+                "command": "/snap/code/33/usr/share/code/code --inspect-port=0 /snap/code/33/usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost",
+                "children": [
+                  {
+                    "pid": 3156,
+                    "parent_pid": 2987,
+                    "command": "/usr/bin/python3 /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/completion.py",
+                    "children": [
+                      {
+                        "pid": 3158,
+                        "parent_pid": 3156,
+                        "command": "/usr/bin/python3 /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python/jedi/inference/compiled/subprocess/__main__.py /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python 3.8.2",
+                        "children": []
+                      },
+                      {
+                        "pid": 3172,
+                        "parent_pid": 3156,
+                        "command": "/usr/bin/python3 /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python/jedi/inference/compiled/subprocess/__main__.py /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python 3.8.2",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "pid": 3002,
+                "parent_pid": 2943,
+                "command": "/snap/code/33/usr/share/code/code /snap/code/33/usr/share/code/resources/app/out/bootstrap-fork --type=watcherService",
+                "children": []
+              },
+              {
+                "pid": 3177,
+                "parent_pid": 2943,
+                "command": "/bin/bash",
+                "children": []
+              }
+            ]
+          },
+          {
+            "pid": 3019,
+            "parent_pid": 2841,
+            "command": "/snap/code/33/usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=9030010178988867006,13740046290272185404,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-US --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/snap/code/33/usr/share/code/resources/app --node-integration --no-sandbox --no-zygote --background-color=#282c34 --disable-blink-features=Auxclick --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=10079652886079001658 --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101",
+            "children": []
+          },
+          {
+            "pid": 3263,
+            "parent_pid": 2841,
+            "command": "/snap/code/33/usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=9030010178988867006,13740046290272185404,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-US --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/snap/code/33/usr/share/code/resources/app --node-integration --webview-tag --no-sandbox --no-zygote --background-color=#282c34 --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=9414220248983529633 --renderer-client-id=9 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101",
+            "children": [
+              {
+                "pid": 3299,
+                "parent_pid": 3263,
+                "command": "/snap/code/33/usr/share/code/code --inspect-port=0 /snap/code/33/usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost",
+                "children": [
+                  {
+                    "pid": 3424,
+                    "parent_pid": 3299,
+                    "command": "/usr/bin/python3 /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/pyvsc-run-isolated.py /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/completion.py",
+                    "children": [
+                      {
+                        "pid": 58828,
+                        "parent_pid": 3424,
+                        "command": "/usr/bin/python3 /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python/jedi/inference/compiled/subprocess/__main__.py /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python 3.8.2",
+                        "children": []
+                      },
+                      {
+                        "pid": 59756,
+                        "parent_pid": 3424,
+                        "command": "/usr/bin/python3 /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python/jedi/inference/compiled/subprocess/__main__.py /home/b/.vscode/extensions/ms-python.python-2020.5.80290/pythonFiles/lib/python 3.8.2",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "pid": 3462,
+                    "parent_pid": 3299,
+                    "command": "/snap/code/33/usr/share/code/code /home/b/.vscode/extensions/ms-azuretools.vscode-docker-1.2.0/dist/dockerfile-language-server-nodejs/lib/server.js --node-ipc --node-ipc --clientProcessId=3299",
+                    "children": []
+                  },
+                  {
+                    "pid": 10175,
+                    "parent_pid": 3299,
+                    "command": "/snap/code/33/usr/share/code/code /snap/code/33/usr/share/code/resources/app/extensions/html-language-features/server/dist/htmlServerMain --node-ipc --clientProcessId=3299",
+                    "children": []
+                  },
+                  {
+                    "pid": 33779,
+                    "parent_pid": 3299,
+                    "command": "/snap/code/33/usr/share/code/code /snap/code/33/usr/share/code/resources/app/extensions/json-language-features/server/dist/jsonServerMain --node-ipc --clientProcessId=3299",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "pid": 3321,
+                "parent_pid": 3263,
+                "command": "/snap/code/33/usr/share/code/code /snap/code/33/usr/share/code/resources/app/out/bootstrap-fork --type=watcherService",
+                "children": []
+              },
+              {
+                "pid": 25051,
+                "parent_pid": 3263,
+                "command": "/bin/bash",
+                "children": [
+                  {
+                    "pid": 60256,
+                    "parent_pid": 25051,
+                    "command": "python3 -c import util; util.pp(util.ps_tree())",
+                    "children": [
+                      {
+                        "pid": 60257,
+                        "parent_pid": 60256,
+                        "command": "/bin/sh -c ps ax -o pid -o ppid -o cmd",
+                        "children": [
+                          {
+                            "pid": 60258,
+                            "parent_pid": 60257,
+                            "command": "ps ax -o pid -o ppid -o cmd",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "pid": 4435,
+            "parent_pid": 2841,
+            "command": "/snap/code/33/usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=9030010178988867006,13740046290272185404,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-US --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/snap/code/33/usr/share/code/resources/app --node-integration --webview-tag --no-sandbox --no-zygote --background-color=#282c34 --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=9266644524799835981 --renderer-client-id=12 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101",
+            "children": [
+              {
+                "pid": 4465,
+                "parent_pid": 4435,
+                "command": "/snap/code/33/usr/share/code/code --inspect-port=0 /snap/code/33/usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost",
+                "children": [
+                  {
+                    "pid": 4600,
+                    "parent_pid": 4465,
+                    "command": "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -noverify -Xmx64M -XX:+UseG1GC -XX:+UseStringDeduplication -cp /home/b/.vscode/extensions/redhat.vscode-xml-0.11.0/server/org.eclipse.lemminx-0.11.1-uber.jar org.eclipse.lemminx.XMLServerLauncher",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "pid": 4466,
+                "parent_pid": 4435,
+                "command": "/bin/bash",
+                "children": []
+              },
+              {
+                "pid": 4494,
+                "parent_pid": 4435,
+                "command": "/snap/code/33/usr/share/code/code /snap/code/33/usr/share/code/resources/app/out/bootstrap-fork --type=watcherService",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "pid": 4190,
+        "parent_pid": 1,
+        "command": "/usr/sbin/uuidd --socket-activation",
+        "children": []
+      },
+      {
+        "pid": 40831,
+        "parent_pid": 1,
+        "command": "SCREEN -d -m upwork",
+        "children": [
+          {
+            "pid": 40832,
+            "parent_pid": 40831,
+            "command": "/opt/Upwork/upwork",
+            "children": [
+              {
+                "pid": 40837,
+                "parent_pid": 40832,
+                "command": "/opt/Upwork/upwork --type=zygote --no-sandbox",
+                "children": [
+                  {
+                    "pid": 40882,
+                    "parent_pid": 40837,
+                    "command": "/opt/Upwork/upwork --type=renderer --no-sandbox --autoplay-policy=no-user-gesture-required --js-flags=--optimize_for_size --enable-features=SharedArrayBuffer --service-pipe-token=4803226762219156573 --lang=en-US --standard-schemes=uta --secure-schemes=uta --a",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "pid": 40866,
+                "parent_pid": 40832,
+                "command": "/opt/Upwork/upwork --type=gpu-process --enable-features=SharedArrayBuffer --no-sandbox --gpu-preferences=KAAAAAAAAACAAABAAQAAAAAAAAAAAGAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --use-gl=swiftshader-webgl --service-request-channel-token=2822996381813404647",
+                "children": []
+              },
+              {
+                "pid": 40868,
+                "parent_pid": 40832,
+                "command": "/opt/Upwork/cmon --for-pid=40832 --for-command=L29wdC9VcHdvcmsvdXB3b3JrAC9vcHQvVXB3b3JrL3Vwd29yawA= --log-path=/home/b/.Upwork/Upwork/Logs/cmon.log",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "pid": 44518,
+        "parent_pid": 1,
+        "command": "SCREEN -d -m spotify",
+        "children": [
+          {
+            "pid": 44519,
+            "parent_pid": 44518,
+            "command": "/snap/spotify/41/usr/share/spotify/spotify",
+            "children": [
+              {
+                "pid": 44631,
+                "parent_pid": 44519,
+                "command": "/snap/spotify/41/usr/share/spotify/spotify --type=zygote --no-sandbox --log-file=/snap/spotify/41/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.26.501 --lang=en",
+                "children": [
+                  {
+                    "pid": 44679,
+                    "parent_pid": 44631,
+                    "command": "/snap/spotify/41/usr/share/spotify/spotify --type=renderer --no-sandbox --log-file=/snap/spotify/41/usr/share/spotify/debug.log --field-trial-handle=3918740300176376985,6986140281488292006,131072 --disable-features=MimeHandlerViewInCrossProcessFrame --lang=en-US --log-file=/snap/spotify/41/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.26.501 --disable-spell-checking --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=581344265783850251 --renderer-client-id=4 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "pid": 44658,
+                "parent_pid": 44519,
+                "command": "/snap/spotify/41/usr/share/spotify/spotify --type=gpu-process --field-trial-handle=3918740300176376985,6986140281488292006,131072 --disable-features=MimeHandlerViewInCrossProcessFrame --no-sandbox --log-file=/snap/spotify/41/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.26.501 --lang=en --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --log-file=/snap/spotify/41/usr/share/spotify/debug.log --service-request-channel-token=2195351293002228001",
+                "children": []
+              },
+              {
+                "pid": 44672,
+                "parent_pid": 44519,
+                "command": "/proc/self/exe --type=utility --field-trial-handle=3918740300176376985,6986140281488292006,131072 --disable-features=MimeHandlerViewInCrossProcessFrame --lang=en-US --service-sandbox-type=network --no-sandbox --log-file=/snap/spotify/41/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.26.501 --lang=en --log-file=/snap/spotify/41/usr/share/spotify/debug.log --service-request-channel-token=13742291638905334363 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pid": 2,
+    "parent_pid": 0,
+    "command": "[kthreadd]",
+    "children": [
+      {
+        "pid": 3,
+        "parent_pid": 2,
+        "command": "[rcu_gp]",
+        "children": []
+      },
+      {
+        "pid": 4,
+        "parent_pid": 2,
+        "command": "[rcu_par_gp]",
+        "children": []
+      },
+      {
+        "pid": 6,
+        "parent_pid": 2,
+        "command": "[kworker/0:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 9,
+        "parent_pid": 2,
+        "command": "[mm_percpu_wq]",
+        "children": []
+      },
+      {
+        "pid": 10,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/0]",
+        "children": []
+      },
+      {
+        "pid": 11,
+        "parent_pid": 2,
+        "command": "[rcu_sched]",
+        "children": []
+      },
+      {
+        "pid": 12,
+        "parent_pid": 2,
+        "command": "[migration/0]",
+        "children": []
+      },
+      {
+        "pid": 13,
+        "parent_pid": 2,
+        "command": "[idle_inject/0]",
+        "children": []
+      },
+      {
+        "pid": 14,
+        "parent_pid": 2,
+        "command": "[cpuhp/0]",
+        "children": []
+      },
+      {
+        "pid": 15,
+        "parent_pid": 2,
+        "command": "[cpuhp/1]",
+        "children": []
+      },
+      {
+        "pid": 16,
+        "parent_pid": 2,
+        "command": "[idle_inject/1]",
+        "children": []
+      },
+      {
+        "pid": 17,
+        "parent_pid": 2,
+        "command": "[migration/1]",
+        "children": []
+      },
+      {
+        "pid": 18,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/1]",
+        "children": []
+      },
+      {
+        "pid": 20,
+        "parent_pid": 2,
+        "command": "[kworker/1:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 21,
+        "parent_pid": 2,
+        "command": "[cpuhp/2]",
+        "children": []
+      },
+      {
+        "pid": 22,
+        "parent_pid": 2,
+        "command": "[idle_inject/2]",
+        "children": []
+      },
+      {
+        "pid": 23,
+        "parent_pid": 2,
+        "command": "[migration/2]",
+        "children": []
+      },
+      {
+        "pid": 24,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/2]",
+        "children": []
+      },
+      {
+        "pid": 26,
+        "parent_pid": 2,
+        "command": "[kworker/2:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 27,
+        "parent_pid": 2,
+        "command": "[cpuhp/3]",
+        "children": []
+      },
+      {
+        "pid": 28,
+        "parent_pid": 2,
+        "command": "[idle_inject/3]",
+        "children": []
+      },
+      {
+        "pid": 29,
+        "parent_pid": 2,
+        "command": "[migration/3]",
+        "children": []
+      },
+      {
+        "pid": 30,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/3]",
+        "children": []
+      },
+      {
+        "pid": 32,
+        "parent_pid": 2,
+        "command": "[kworker/3:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 33,
+        "parent_pid": 2,
+        "command": "[cpuhp/4]",
+        "children": []
+      },
+      {
+        "pid": 34,
+        "parent_pid": 2,
+        "command": "[idle_inject/4]",
+        "children": []
+      },
+      {
+        "pid": 35,
+        "parent_pid": 2,
+        "command": "[migration/4]",
+        "children": []
+      },
+      {
+        "pid": 36,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/4]",
+        "children": []
+      },
+      {
+        "pid": 38,
+        "parent_pid": 2,
+        "command": "[kworker/4:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 39,
+        "parent_pid": 2,
+        "command": "[cpuhp/5]",
+        "children": []
+      },
+      {
+        "pid": 40,
+        "parent_pid": 2,
+        "command": "[idle_inject/5]",
+        "children": []
+      },
+      {
+        "pid": 41,
+        "parent_pid": 2,
+        "command": "[migration/5]",
+        "children": []
+      },
+      {
+        "pid": 42,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/5]",
+        "children": []
+      },
+      {
+        "pid": 44,
+        "parent_pid": 2,
+        "command": "[kworker/5:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 45,
+        "parent_pid": 2,
+        "command": "[cpuhp/6]",
+        "children": []
+      },
+      {
+        "pid": 46,
+        "parent_pid": 2,
+        "command": "[idle_inject/6]",
+        "children": []
+      },
+      {
+        "pid": 47,
+        "parent_pid": 2,
+        "command": "[migration/6]",
+        "children": []
+      },
+      {
+        "pid": 48,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/6]",
+        "children": []
+      },
+      {
+        "pid": 50,
+        "parent_pid": 2,
+        "command": "[kworker/6:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 51,
+        "parent_pid": 2,
+        "command": "[cpuhp/7]",
+        "children": []
+      },
+      {
+        "pid": 52,
+        "parent_pid": 2,
+        "command": "[idle_inject/7]",
+        "children": []
+      },
+      {
+        "pid": 53,
+        "parent_pid": 2,
+        "command": "[migration/7]",
+        "children": []
+      },
+      {
+        "pid": 54,
+        "parent_pid": 2,
+        "command": "[ksoftirqd/7]",
+        "children": []
+      },
+      {
+        "pid": 56,
+        "parent_pid": 2,
+        "command": "[kworker/7:0H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 57,
+        "parent_pid": 2,
+        "command": "[kdevtmpfs]",
+        "children": []
+      },
+      {
+        "pid": 58,
+        "parent_pid": 2,
+        "command": "[netns]",
+        "children": []
+      },
+      {
+        "pid": 59,
+        "parent_pid": 2,
+        "command": "[rcu_tasks_kthre]",
+        "children": []
+      },
+      {
+        "pid": 60,
+        "parent_pid": 2,
+        "command": "[kauditd]",
+        "children": []
+      },
+      {
+        "pid": 63,
+        "parent_pid": 2,
+        "command": "[khungtaskd]",
+        "children": []
+      },
+      {
+        "pid": 64,
+        "parent_pid": 2,
+        "command": "[oom_reaper]",
+        "children": []
+      },
+      {
+        "pid": 65,
+        "parent_pid": 2,
+        "command": "[writeback]",
+        "children": []
+      },
+      {
+        "pid": 66,
+        "parent_pid": 2,
+        "command": "[kcompactd0]",
+        "children": []
+      },
+      {
+        "pid": 67,
+        "parent_pid": 2,
+        "command": "[ksmd]",
+        "children": []
+      },
+      {
+        "pid": 68,
+        "parent_pid": 2,
+        "command": "[khugepaged]",
+        "children": []
+      },
+      {
+        "pid": 162,
+        "parent_pid": 2,
+        "command": "[kintegrityd]",
+        "children": []
+      },
+      {
+        "pid": 163,
+        "parent_pid": 2,
+        "command": "[kblockd]",
+        "children": []
+      },
+      {
+        "pid": 164,
+        "parent_pid": 2,
+        "command": "[blkcg_punt_bio]",
+        "children": []
+      },
+      {
+        "pid": 166,
+        "parent_pid": 2,
+        "command": "[tpm_dev_wq]",
+        "children": []
+      },
+      {
+        "pid": 167,
+        "parent_pid": 2,
+        "command": "[ata_sff]",
+        "children": []
+      },
+      {
+        "pid": 168,
+        "parent_pid": 2,
+        "command": "[md]",
+        "children": []
+      },
+      {
+        "pid": 169,
+        "parent_pid": 2,
+        "command": "[edac-poller]",
+        "children": []
+      },
+      {
+        "pid": 170,
+        "parent_pid": 2,
+        "command": "[devfreq_wq]",
+        "children": []
+      },
+      {
+        "pid": 171,
+        "parent_pid": 2,
+        "command": "[watchdogd]",
+        "children": []
+      },
+      {
+        "pid": 174,
+        "parent_pid": 2,
+        "command": "[kswapd0]",
+        "children": []
+      },
+      {
+        "pid": 175,
+        "parent_pid": 2,
+        "command": "[ecryptfs-kthrea]",
+        "children": []
+      },
+      {
+        "pid": 179,
+        "parent_pid": 2,
+        "command": "[kthrotld]",
+        "children": []
+      },
+      {
+        "pid": 180,
+        "parent_pid": 2,
+        "command": "[acpi_thermal_pm]",
+        "children": []
+      },
+      {
+        "pid": 181,
+        "parent_pid": 2,
+        "command": "[vfio-irqfd-clea]",
+        "children": []
+      },
+      {
+        "pid": 184,
+        "parent_pid": 2,
+        "command": "[ipv6_addrconf]",
+        "children": []
+      },
+      {
+        "pid": 195,
+        "parent_pid": 2,
+        "command": "[kstrp]",
+        "children": []
+      },
+      {
+        "pid": 199,
+        "parent_pid": 2,
+        "command": "[kworker/u17:0-rb_allocator]",
+        "children": []
+      },
+      {
+        "pid": 215,
+        "parent_pid": 2,
+        "command": "[charger_manager]",
+        "children": []
+      },
+      {
+        "pid": 274,
+        "parent_pid": 2,
+        "command": "[cryptd]",
+        "children": []
+      },
+      {
+        "pid": 293,
+        "parent_pid": 2,
+        "command": "[nv_queue]",
+        "children": []
+      },
+      {
+        "pid": 294,
+        "parent_pid": 2,
+        "command": "[nv_queue]",
+        "children": []
+      },
+      {
+        "pid": 310,
+        "parent_pid": 2,
+        "command": "[scsi_eh_0]",
+        "children": []
+      },
+      {
+        "pid": 311,
+        "parent_pid": 2,
+        "command": "[scsi_tmf_0]",
+        "children": []
+      },
+      {
+        "pid": 312,
+        "parent_pid": 2,
+        "command": "[scsi_eh_1]",
+        "children": []
+      },
+      {
+        "pid": 313,
+        "parent_pid": 2,
+        "command": "[scsi_tmf_1]",
+        "children": []
+      },
+      {
+        "pid": 314,
+        "parent_pid": 2,
+        "command": "[scsi_eh_2]",
+        "children": []
+      },
+      {
+        "pid": 315,
+        "parent_pid": 2,
+        "command": "[scsi_tmf_2]",
+        "children": []
+      },
+      {
+        "pid": 316,
+        "parent_pid": 2,
+        "command": "[scsi_eh_3]",
+        "children": []
+      },
+      {
+        "pid": 317,
+        "parent_pid": 2,
+        "command": "[scsi_tmf_3]",
+        "children": []
+      },
+      {
+        "pid": 318,
+        "parent_pid": 2,
+        "command": "[scsi_eh_4]",
+        "children": []
+      },
+      {
+        "pid": 319,
+        "parent_pid": 2,
+        "command": "[scsi_tmf_4]",
+        "children": []
+      },
+      {
+        "pid": 320,
+        "parent_pid": 2,
+        "command": "[scsi_eh_5]",
+        "children": []
+      },
+      {
+        "pid": 321,
+        "parent_pid": 2,
+        "command": "[scsi_tmf_5]",
+        "children": []
+      },
+      {
+        "pid": 328,
+        "parent_pid": 2,
+        "command": "[nvidia-modeset/]",
+        "children": []
+      },
+      {
+        "pid": 329,
+        "parent_pid": 2,
+        "command": "[nvidia-modeset/]",
+        "children": []
+      },
+      {
+        "pid": 332,
+        "parent_pid": 2,
+        "command": "[kworker/2:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 333,
+        "parent_pid": 2,
+        "command": "[kworker/4:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 336,
+        "parent_pid": 2,
+        "command": "[kworker/7:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 380,
+        "parent_pid": 2,
+        "command": "[kworker/5:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 382,
+        "parent_pid": 2,
+        "command": "[kworker/3:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 383,
+        "parent_pid": 2,
+        "command": "[jbd2/sda7-8]",
+        "children": []
+      },
+      {
+        "pid": 384,
+        "parent_pid": 2,
+        "command": "[ext4-rsv-conver]",
+        "children": []
+      },
+      {
+        "pid": 385,
+        "parent_pid": 2,
+        "command": "[kworker/0:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 399,
+        "parent_pid": 2,
+        "command": "[kworker/6:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 405,
+        "parent_pid": 2,
+        "command": "[kworker/1:1H-kblockd]",
+        "children": []
+      },
+      {
+        "pid": 506,
+        "parent_pid": 2,
+        "command": "[loop0]",
+        "children": []
+      },
+      {
+        "pid": 515,
+        "parent_pid": 2,
+        "command": "[UVM global queu]",
+        "children": []
+      },
+      {
+        "pid": 516,
+        "parent_pid": 2,
+        "command": "[UVM deferred re]",
+        "children": []
+      },
+      {
+        "pid": 517,
+        "parent_pid": 2,
+        "command": "[UVM Tools Event]",
+        "children": []
+      },
+      {
+        "pid": 527,
+        "parent_pid": 2,
+        "command": "[loop1]",
+        "children": []
+      },
+      {
+        "pid": 545,
+        "parent_pid": 2,
+        "command": "[irq/128-mei_me]",
+        "children": []
+      },
+      {
+        "pid": 578,
+        "parent_pid": 2,
+        "command": "[cfg80211]",
+        "children": []
+      },
+      {
+        "pid": 582,
+        "parent_pid": 2,
+        "command": "[loop2]",
+        "children": []
+      },
+      {
+        "pid": 599,
+        "parent_pid": 2,
+        "command": "[loop3]",
+        "children": []
+      },
+      {
+        "pid": 605,
+        "parent_pid": 2,
+        "command": "[kworker/u17:1-rb_allocator]",
+        "children": []
+      },
+      {
+        "pid": 610,
+        "parent_pid": 2,
+        "command": "[irq/129-iwlwifi]",
+        "children": []
+      },
+      {
+        "pid": 618,
+        "parent_pid": 2,
+        "command": "[loop4]",
+        "children": []
+      },
+      {
+        "pid": 622,
+        "parent_pid": 2,
+        "command": "[loop5]",
+        "children": []
+      },
+      {
+        "pid": 648,
+        "parent_pid": 2,
+        "command": "[loop6]",
+        "children": []
+      },
+      {
+        "pid": 676,
+        "parent_pid": 2,
+        "command": "[loop7]",
+        "children": []
+      },
+      {
+        "pid": 727,
+        "parent_pid": 2,
+        "command": "[loop8]",
+        "children": []
+      },
+      {
+        "pid": 762,
+        "parent_pid": 2,
+        "command": "[loop9]",
+        "children": []
+      },
+      {
+        "pid": 796,
+        "parent_pid": 2,
+        "command": "[spl_system_task]",
+        "children": []
+      },
+      {
+        "pid": 797,
+        "parent_pid": 2,
+        "command": "[spl_delay_taskq]",
+        "children": []
+      },
+      {
+        "pid": 798,
+        "parent_pid": 2,
+        "command": "[spl_dynamic_tas]",
+        "children": []
+      },
+      {
+        "pid": 799,
+        "parent_pid": 2,
+        "command": "[spl_kmem_cache]",
+        "children": []
+      },
+      {
+        "pid": 800,
+        "parent_pid": 2,
+        "command": "[zvol]",
+        "children": []
+      },
+      {
+        "pid": 801,
+        "parent_pid": 2,
+        "command": "[arc_prune]",
+        "children": []
+      },
+      {
+        "pid": 802,
+        "parent_pid": 2,
+        "command": "[zthr_procedure]",
+        "children": []
+      },
+      {
+        "pid": 803,
+        "parent_pid": 2,
+        "command": "[zthr_procedure]",
+        "children": []
+      },
+      {
+        "pid": 804,
+        "parent_pid": 2,
+        "command": "[dbu_evict]",
+        "children": []
+      },
+      {
+        "pid": 805,
+        "parent_pid": 2,
+        "command": "[dbuf_evict]",
+        "children": []
+      },
+      {
+        "pid": 806,
+        "parent_pid": 2,
+        "command": "[z_vdev_file]",
+        "children": []
+      },
+      {
+        "pid": 807,
+        "parent_pid": 2,
+        "command": "[l2arc_feed]",
+        "children": []
+      },
+      {
+        "pid": 1124,
+        "parent_pid": 2,
+        "command": "[irq/131-nvidia]",
+        "children": []
+      },
+      {
+        "pid": 1125,
+        "parent_pid": 2,
+        "command": "[nvidia]",
+        "children": []
+      },
+      {
+        "pid": 1126,
+        "parent_pid": 2,
+        "command": "[nv_queue]",
+        "children": []
+      },
+      {
+        "pid": 2157,
+        "parent_pid": 2,
+        "command": "[krfcommd]",
+        "children": []
+      },
+      {
+        "pid": 7437,
+        "parent_pid": 2,
+        "command": "[loop10]",
+        "children": []
+      },
+      {
+        "pid": 37349,
+        "parent_pid": 2,
+        "command": "[kworker/2:0-events]",
+        "children": []
+      },
+      {
+        "pid": 39195,
+        "parent_pid": 2,
+        "command": "[kworker/0:1-events]",
+        "children": []
+      },
+      {
+        "pid": 39935,
+        "parent_pid": 2,
+        "command": "[kworker/6:1-mm_percpu_wq]",
+        "children": []
+      },
+      {
+        "pid": 41664,
+        "parent_pid": 2,
+        "command": "[kworker/3:6-events]",
+        "children": []
+      },
+      {
+        "pid": 42110,
+        "parent_pid": 2,
+        "command": "[kworker/1:2-events]",
+        "children": []
+      },
+      {
+        "pid": 45209,
+        "parent_pid": 2,
+        "command": "[kworker/u16:0-events_unbound]",
+        "children": []
+      },
+      {
+        "pid": 49324,
+        "parent_pid": 2,
+        "command": "[kworker/3:0-mm_percpu_wq]",
+        "children": []
+      },
+      {
+        "pid": 56975,
+        "parent_pid": 2,
+        "command": "[kworker/4:2-events]",
+        "children": []
+      },
+      {
+        "pid": 58079,
+        "parent_pid": 2,
+        "command": "[kworker/4:0-mm_percpu_wq]",
+        "children": []
+      },
+      {
+        "pid": 59211,
+        "parent_pid": 2,
+        "command": "[kworker/0:2-events]",
+        "children": []
+      },
+      {
+        "pid": 59301,
+        "parent_pid": 2,
+        "command": "[kworker/7:3-events]",
+        "children": []
+      },
+      {
+        "pid": 59302,
+        "parent_pid": 2,
+        "command": "[kworker/7:4-events]",
+        "children": []
+      },
+      {
+        "pid": 59341,
+        "parent_pid": 2,
+        "command": "[kworker/1:0-events]",
+        "children": []
+      },
+      {
+        "pid": 59362,
+        "parent_pid": 2,
+        "command": "[kworker/2:2-events]",
+        "children": []
+      },
+      {
+        "pid": 59484,
+        "parent_pid": 2,
+        "command": "[kworker/5:0-events]",
+        "children": []
+      },
+      {
+        "pid": 59618,
+        "parent_pid": 2,
+        "command": "[kworker/6:2-events]",
+        "children": []
+      },
+      {
+        "pid": 59729,
+        "parent_pid": 2,
+        "command": "[kworker/u16:1-events_power_efficient]",
+        "children": []
+      },
+      {
+        "pid": 59851,
+        "parent_pid": 2,
+        "command": "[kworker/5:2-events]",
+        "children": []
+      },
+      {
+        "pid": 60003,
+        "parent_pid": 2,
+        "command": "[kworker/1:1-events]",
+        "children": []
+      },
+      {
+        "pid": 60064,
+        "parent_pid": 2,
+        "command": "[kworker/2:1-events]",
+        "children": []
+      },
+      {
+        "pid": 60065,
+        "parent_pid": 2,
+        "command": "[kworker/u16:2]",
+        "children": []
+      },
+      {
+        "pid": 60125,
+        "parent_pid": 2,
+        "command": "[kworker/5:1-events]",
+        "children": []
+      },
+      {
+        "pid": 60179,
+        "parent_pid": 2,
+        "command": "[kworker/0:0-events]",
+        "children": []
+      }
+    ]
+  }
+]
