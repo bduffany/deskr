@@ -10,8 +10,10 @@ Have you ever wished that...
 
 _Well then, have I got an app for you!_
 
-(DISCLAIMER: This can only be considered an "app" if you are **tech-savvy** enough
-to run arbitrary code downloaded from the Internet on your _c o m p u t e r_)
+### DISCLAIMER
+
+This can only be considered an "app" if you are **tech-savvy** enough
+to run arbitrary code downloaded from the Internet on your _c o m p u t e r_
 
 ## DESKR
 
@@ -52,6 +54,7 @@ _"Dangit Napolean, write yourself a dang CONFIG file!"_
 - The example YAML file is so _WELL DOCUMENTED_ that I can afford to be lazy enough
   to NOT have to add more documentation in this STUPID README FILE THAT YOU HAVE SPENT
   WAY TOO LONG READING
+  - DANGIT Brandon the goal was to SAVE my freaking time, not waste it
 - Run `./deskr create-shortcut path/to/your/config/file`
 
 ## A BUNCH OF EMOJIS (AS PROOF THAT THIS SOFTWARE WAS WRITTEN IN 2020)
@@ -61,4 +64,4 @@ _"Dangit Napolean, write yourself a dang CONFIG file!"_
 And let's not forget about our favorite emoji: 🚀
 
 (The rocket emoji indicates that we are headed towards the stars.
-#TechnologicalAdvancement)
+**#TechnologicalAdvancement** **#ElonMuskIsMySavior**)
